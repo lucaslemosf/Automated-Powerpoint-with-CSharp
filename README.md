@@ -1,9 +1,8 @@
 # Automated-Powerpoint-with-CSharp
 
-# Automated-Powerpoint-with-CSharp
 Creating a Powerpoint Presentation with C# - Visual Studio 2017 Community
 
-Let suppose you are NOT trying to make a simple Powerpoint Presentation. Instead, what you want is to create it programatically, because your application is supposed to take the Data from a database and create a PowerPoint presentation with the data. 
+Let suppose you are NOT trying to make manually a Powerpoint Presentation. Instead, what you want is to create it programatically, because your application is supposed to take the Data from a database and create a PowerPoint presentation with the data. 
 
 So, these are the topics I want to talk about (and show the code):
 - Creating a PowerPoint Presentation from VS 2017 (open, create new and save/save as)
@@ -25,5 +24,17 @@ So, let's get started!
     Click with the right button on the project name (the menu on the right) 
     Then go to "Manage NuGet Packages"
     After that, chose the tab "Browse" 
-    Search for "
+    Search for " ". Install the package
+    
+3) Add "#using ..." on the top of your "Program.cs" function
+
+
+Once you have done those steps, you are about to start the presentation.
+
+First, decide if you want to create a new presentation or use a local Powerpoint file as template. 
+I recommend to use the a local file if you want to have some slides that will not be touched, for example cover and the "thank for your attention" slide. 
+
+
+
+
 
