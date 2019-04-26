@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucaslemos\\Desktop\\Github\\PowerPoint-CSharp\\PowerpointCsharp\\PowerpointCsharp\\PowerpointCsharp.csproj",
+      "projectUniqueName": "C:\\Users\\lucaslemos\\Desktop\\Github\\PowerPoint-CSharp\\Automated-Powerpoint-with-CSharp\\PowerpointCsharp\\PowerpointCsharp\\PowerpointCsharp.csproj",
       "projectName": "PowerpointCsharp",
-      "projectPath": "C:\\Users\\lucaslemos\\Desktop\\Github\\PowerPoint-CSharp\\PowerpointCsharp\\PowerpointCsharp\\PowerpointCsharp.csproj",
+      "projectPath": "C:\\Users\\lucaslemos\\Desktop\\Github\\PowerPoint-CSharp\\Automated-Powerpoint-with-CSharp\\PowerpointCsharp\\PowerpointCsharp\\PowerpointCsharp.csproj",
       "packagesPath": "C:\\Users\\lucaslemos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucaslemos\\Desktop\\Github\\PowerPoint-CSharp\\PowerpointCsharp\\PowerpointCsharp\\obj\\",
+      "outputPath": "C:\\Users\\lucaslemos\\Desktop\\Github\\PowerPoint-CSharp\\Automated-Powerpoint-with-CSharp\\PowerpointCsharp\\PowerpointCsharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

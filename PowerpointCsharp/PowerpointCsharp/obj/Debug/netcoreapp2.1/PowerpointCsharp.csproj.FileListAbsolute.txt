@@ -1,0 +1,13 @@
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\bin\Debug\netcoreapp2.1\PowerpointCsharp.deps.json
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\bin\Debug\netcoreapp2.1\PowerpointCsharp.runtimeconfig.json
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\bin\Debug\netcoreapp2.1\PowerpointCsharp.runtimeconfig.dev.json
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\bin\Debug\netcoreapp2.1\PowerpointCsharp.dll
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\bin\Debug\netcoreapp2.1\PowerpointCsharp.pdb
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\bin\Debug\netcoreapp2.1\Microsoft.Office.Interop.PowerPoint.dll
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\obj\Debug\netcoreapp2.1\PowerpointCsharp.csprojAssemblyReference.cache
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\obj\Debug\netcoreapp2.1\PowerpointCsharp.csproj.CoreCompileInputs.cache
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\obj\Debug\netcoreapp2.1\PowerpointCsharp.AssemblyInfoInputs.cache
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\obj\Debug\netcoreapp2.1\PowerpointCsharp.AssemblyInfo.cs
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\obj\Debug\netcoreapp2.1\PowerpointCsharp.csproj.CopyComplete
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\obj\Debug\netcoreapp2.1\PowerpointCsharp.dll
+C:\Users\lucaslemos\Desktop\Github\PowerPoint-CSharp\Automated-Powerpoint-with-CSharp\PowerpointCsharp\PowerpointCsharp\obj\Debug\netcoreapp2.1\PowerpointCsharp.pdb
