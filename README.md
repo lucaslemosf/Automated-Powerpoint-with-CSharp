@@ -61,8 +61,23 @@ I recommend to use the a local file if you want to have some slides that will no
  
  So you can spare time and space. It is just a shortcut.
  
+ ------------------------------------------------------------------------------------------------------------------------------------
  #Creating a new slide and shapes
+ Once you have the "PowerPoint" shortcut (see just above), you can create a variable slide and a variable slides.
+ 
+    PowerPoint.Slides slides; //will be used as the whole collection of my presentation
+    PowerPoint._Slide slide; //will be used as my current slide being edited
+    
+ The first one is a like a vector that contains all the slides on the presentation. The second one I use as my current slide that I am editing. 
+    slides = myPresentation.Slides; // (big S)
+    PowerPoint.CustomLayout customLayout = myPresentation.SlideMaster.CustomLayouts[PowerPoint.PpSlideLayout.ppLayoutText];
+    slide = slides.AddSlide(2, customLayout); //Creating a new slide, which will be second slide of my presentation
+                                              //CustomLayout is a mandatory input
+ 
  Something you need to understand is: everything inside a slide is called shapes. A shape can be a picture, a table, a textbox, and so on...
  When you use currentSlide.Shapes(1), you are trying to get a shape from a bunch of shapes (Shapes). It is complicated, because you may have NO control on the order. Shapes is a vector and you control by index. 
- That is why a prefere to delete all shapes from a new slide (it ALWAYS comes with at least one shape). 
+ That is why a prefere to delete all shapes from a new slide (it ALWAYS comes with at least one shape). And what a create is a vector of shapes, so I can define, for example, that my shapes(1) is a picture shapes(2) is a textbox. Because if you change them, even though they're both Shape, they have many different attributes. 
+ 
+ ------------------------------------------------------------------------------------------------------------------------------------
+ #Add Pictures, Tables, Arrows, Icons, Textboxes 
 
