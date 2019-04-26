@@ -19,6 +19,10 @@ So, let's get started!
 
 1) Create a new Project on VS 2017 
     I chose Console App (.NET Framework), even though I won't use the console itself. Feel free to choose what you want (and you know about it). I choose .NET Framework 4.6.1
+    Another thing you will need to do is to add a reference to a "office.dll Version:15.0.0.0". For that, download the file:
+    https://www.dllme.com/dll/files/office_dll.html
+    Then click with the right button on the References and choose "add a reference". Go to browse and choose the Office.dll inside the        zip file you've just downloaded.
+    ATTENTION: this will avoid problems like "msotristate is defined as an assembly that is not referenced". (I spent two hours on it)
     
 2) Install the new library 
     Click with the right button on the project name (the menu on the right) 
@@ -45,5 +49,20 @@ I recommend to use the a local file if you want to have some slides that will no
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 #Opening a existing PowerPoint
-
+            //Creating an Application
+            Application myApplication = new Application();
+            //Creating a Presentation - opening a existing PowerPoint
+            Presentation myPresentation = myApplication.Presentations.Open(@"C:\Users\lucaslemos\Desktop\Github\PowerPoint-                         CSharp\tutorial_slide.pptx");
+            
+ You will probably many times the following sentence "Microsoft.Office.Interop.PowerPoint". To make your code look better,
+ you can add on the top:
+    
+    using PowerPoint = Microsoft.Office.Interop.PowerPoint;
+ 
+ So you can spare time and space. It is just a shortcut.
+ 
+ #Creating a new slide and shapes
+ Something you need to understand is: everything inside a slide is called shapes. A shape can be a picture, a table, a textbox, and so on...
+ When you use currentSlide.Shapes(1), you are trying to get a shape from a bunch of shapes (Shapes). It is complicated, because you may have NO control on the order. Shapes is a vector and you control by index. 
+ That is why a prefere to delete all shapes from a new slide (it ALWAYS comes with at least one shape). 
 
