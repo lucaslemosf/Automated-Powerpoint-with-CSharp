@@ -21,7 +21,10 @@ namespace PowerpointCsharp
             slide = slides.AddSlide(2, customLayout); //Creating a new slide, which will be second slide of my presentation
                                                       //CustomLayout is a mandatory input
 
-
+            //Dealing with shapes
+            PowerPoint.Shapes shapes = slide.Shapes;  //taking all the shapes collection from my current slide                                        
+                                                      //Deleting all shapes
+            delete_shapes(shapes); //calling a new function to delete the shapes from the current slide
         }
     }
 }
