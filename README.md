@@ -104,5 +104,59 @@ I recommend to use the a local file if you want to have some slides that will no
         
  
  ------------------------------------------------------------------------------------------------------------------------------------
- #Add Pictures, Tables, Arrows, Icons, Textboxes 
+ #Add Pictures, Textboxes, Tables, Arrows, Icons,  
+ 
+ PICTURES
+ 
+               slide.Shapes.AddPicture(@"C:\Users\lucaslemos\Desktop\IMG_example.jpg", Microsoft.Office.Core.MsoTriState.msoFalse,                          Microsoft.Office.Core.MsoTriState.msoTrue, 
+                200, 200, 30, 40); //the first paramether is the local address, the socnd and third I recommend to set up like this
+                                  //and the you have Left, Top, Widht and Height
+LocalAddress = @" [insert here the address]  ";
+LinkToFile = Microsoft.Office.Core.MsoTriState.msoFalse, if you do not want the link between the picture file and your powerpoint
+SaveWithDocument = Microsoft.Office.Core.MsoTriState.msoTrue, if you want to save with your presentation
+Left = from the left board of the slide to the point you want, in pixels
+Top = from the top of the slide to the point you want, in pixels
+Widht = the width of your image, in pixels
+Height = the width of your image, in pixels
 
+I do not know why, but for some picturew you cannot scale them, maybe due to format. For .jpg in the example the scalingg did not work, but for .png it does work. 
+
+
+TEXTBOXES
+
+             private static void add_textbox(_Slide slide)
+        {
+            PowerPoint.Shape[] shape = new PowerPoint.Shape[10]; //creating a local collection of shapes
+            
+            shape[0] = slide.Shapes.AddTextbox(Microsoft.Office.Core.MsoTextOrientation.msoTextOrientationHorizontal,
+                100, 200, 250, 50); //saving the returned shape into a vector of shape (not of shapes, but shape)
+            
+            //Ccreating a TextRange - our objet text
+            PowerPoint.TextRange textRange;
+            textRange = shape[0].TextFrame.TextRange; //assigning our shape to our text range
+            textRange.Text = "Here goes the text";
+            textRange.Font.Name = "Helvetica";
+            textRange.Font.Size = 12;
+            textRange.Font.Bold = Microsoft.Office.Core.MsoTriState.msoTrue; //for bold text
+            textRange.Font.Italic = Microsoft.Office.Core.MsoTriState.msoTrue; //or italic text
+            
+            //Changing text color
+            SolidBrush Brush = new SolidBrush(Color.FromArgb(255, 10, 200, 240));
+            textRange.Font.Color.RGB = Brush.Color.ToArgb();
+        }
+        
+  So here you can see that we have the addTextBox method, that is pretty much like the AddPicture (both have
+  left, top, width, height attributes. But for the AddTextbox, the first attirbute is the text orientation (there are
+  horizontal, vertical, downward, Mixed, Upward, and so on...
+  
+  About the color changing, i found it really difficult. The solution I got is: create a SolidBrush and define its color.
+  .ToArgb(a, b, c, d) are: 
+  a = from 0 to 255 -> color transparency
+  b =  from 0 to 255 -> blue
+  c =  from 0 to 255 -> green
+  d =  from 0 to 255 -> red
+  
+  It should be Red Green Blue, but for some reason is alpha(transaparency), blue, green, red. 
+So, if you have the RGB from the color you want, just put alpha as 255 and then the blue component, followed by the green and then
+the red component. The order is quite important. 
+  
