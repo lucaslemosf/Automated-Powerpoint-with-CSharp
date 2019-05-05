@@ -49,6 +49,7 @@ I recommend to use the a local file if you want to have some slides that will no
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 #Opening a existing PowerPoint
+
             //Creating an Application
             Application myApplication = new Application();
             //Creating a Presentation - opening a existing PowerPoint
@@ -69,6 +70,7 @@ I recommend to use the a local file if you want to have some slides that will no
     PowerPoint._Slide slide; //will be used as my current slide being edited
     
  The first one is a like a vector that contains all the slides on the presentation. The second one I use as my current slide that I am editing. 
+ 
     slides = myPresentation.Slides; // (big S)
     PowerPoint.CustomLayout customLayout = myPresentation.SlideMaster.CustomLayouts[PowerPoint.PpSlideLayout.ppLayoutText];
     slide = slides.AddSlide(2, customLayout); //Creating a new slide, which will be second slide of my presentation
@@ -76,7 +78,30 @@ I recommend to use the a local file if you want to have some slides that will no
  
  Something you need to understand is: everything inside a slide is called shapes. A shape can be a picture, a table, a textbox, and so on...
  When you use currentSlide.Shapes(1), you are trying to get a shape from a bunch of shapes (Shapes). It is complicated, because you may have NO control on the order. Shapes is a vector and you control by index. 
- That is why a prefere to delete all shapes from a new slide (it ALWAYS comes with at least one shape). And what a create is a vector of shapes, so I can define, for example, that my shapes(1) is a picture shapes(2) is a textbox. Because if you change them, even though they're both Shape, they have many different attributes. 
+ That is why a prefere to delete all shapes from a new slide (it ALWAYS comes with at least one shape). I like to create a vector of shapes, so I can define, for example, that my shapes(1) is a picture shapes(2) is a textbox. Because if you change them, even though they're both Shape, they have many different attributes. 
+ 
+             //Dealing with shapes
+            PowerPoint.Shapes shapes = slide.Shapes;  //taking all the shapes collection from my current slide                                        
+            //Deleting all shapes
+            delete_shapes(shapes); //calling a new function to delete the shapes from the current slide
+            
+ And the function delete_shapes would be:
+ 
+             private static void delete_shapes(Shapes shapes)
+        {
+            if (shapes == null)
+                return;
+            List <PowerPoint.Shape> listShapes = new List<PowerPoint.Shape>(); //using System.Collections.Generic is necessary
+            foreach(PowerPoint.Shape shape in shapes)
+            {
+                listShapes.Add(shape); //adding each shape on my list of shapes
+            }
+            foreach(PowerPoint.Shape shape in listShapes)
+            {
+                shape.Delete(); //deleting one by one
+            }
+        }
+        
  
  ------------------------------------------------------------------------------------------------------------------------------------
  #Add Pictures, Tables, Arrows, Icons, Textboxes 
