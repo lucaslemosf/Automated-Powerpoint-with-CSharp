@@ -150,6 +150,7 @@ TEXTBOXES
   horizontal, vertical, downward, Mixed, Upward, and so on...
   
   About the color changing, i found it really difficult. The solution I got is: create a SolidBrush and define its color.
+  
   .ToArgb(a, b, c, d) are: 
   a = from 0 to 255 -> color transparency
   b =  from 0 to 255 -> blue
@@ -158,5 +159,5 @@ TEXTBOXES
   
   It should be Red Green Blue, but for some reason is alpha(transaparency), blue, green, red. 
 So, if you have the RGB from the color you want, just put alpha as 255 and then the blue component, followed by the green and then
-the red component. The order is quite important. 
+the red component. The order is very important. 
   
